@@ -1,0 +1,243 @@
+/*
+Theme Name: Blocksy Child
+Template: blocksy
+Version: 1.0.1
+*/
+/* ============================================================
+ * uztrading.net · Blocksy Additional CSS — v3 (optimized)
+ * ============================================================ */
+
+/* ==================== 1. ТОКЕНЫ И БАЗА ==================== */
+:root {
+	--color-brand-primary:        #0B5FFF;
+	--color-brand-primary-hover:  #0A4FD9;
+	--color-brand-on-primary:     #FFFFFF;
+	--color-neutral-0:            #FFFFFF;
+	--color-neutral-50:           #F7F9FC;
+	--color-neutral-200:          #E2E8F0;
+	--color-neutral-700:          #334155;
+	--color-neutral-900:          #0F172A;
+	--color-rating-star-fill:     #F5A623;
+}
+
+.font-numeric, table td { font-variant-numeric: tabular-nums lining-nums; }
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+	outline: 2px solid var(--color-brand-primary);
+	outline-offset: 2px;
+}
+
+.entry-card, .ct-card { border-radius: 12px; }
+
+/* ==================== 2. КАРТОЧКА БРОКЕРА ==================== */
+.uzt-broker {
+	max-width: 1200px; margin: 0 auto; padding: 16px;
+	color: var(--color-neutral-700); font-family: Inter, system-ui, sans-serif; line-height: 1.6;
+}
+.uzt-broker h1, .uzt-broker h2, .uzt-broker h3 { color: var(--color-neutral-900); }
+.uzt-broker h2 { font-size: 24px; margin: 32px 0 12px; }
+.uzt-broker h3 { font-size: 18px; margin: 20px 0 8px; }
+.uzt-broker section { margin-bottom: 24px; }
+
+.uzt-hero { background: var(--color-neutral-50); border: 1px solid var(--color-neutral-200); border-radius: 12px; padding: 24px; }
+.uzt-hero__logo { max-width: 160px; height: auto; margin-bottom: 12px; }
+.uzt-hero__title { font-size: 28px; margin: 0 0 12px; }
+
+.uzt-rating { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 18px; color: #b8681f; }
+.uzt-rating__bar { position: relative; display: inline-block; width: 110px; height: 18px; background: var(--color-neutral-200); border-radius: 4px; overflow: hidden; }
+.uzt-rating__fill { position: absolute; left: 0; top: 0; height: 100%; background: var(--color-rating-star-fill); }
+
+.uzt-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.uzt-badge { display: inline-block; padding: 4px 10px; border-radius: 8px; background: var(--color-neutral-200); color: var(--color-neutral-700); font-size: 13px; font-weight: 600; }
+.uzt-badge--ok    { background: #DCFCE7; color: #166534; }
+.uzt-badge--halal { background: #0A7A68; color: #fff; }
+
+.uzt-kpi { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.uzt-kpi__item { flex: 1; min-width: 90px; background: var(--color-neutral-0); border: 1px solid var(--color-neutral-200); border-radius: 8px; padding: 10px; text-align: center; }
+.uzt-kpi__item span   { display: block; font-size: 12px; color: #64748B; }
+.uzt-kpi__item strong { font-size: 18px; color: var(--color-neutral-900); }
+
+/* --- Оптимизированные кнопки CTA --- */
+.uzt-cta, .uzt-cta:link, .uzt-cta:visited { 
+	display: inline-block; 
+	background: var(--color-brand-primary); 
+	color: #fff !important; 
+	font-weight: 700; 
+	padding: 12px 24px; 
+	border-radius: 8px; 
+	text-decoration: none; 
+}
+.uzt-cta:hover, .uzt-cta:focus, .uzt-cta:active { 
+	background: var(--color-brand-primary-hover); 
+	color: #fff !important; 
+	text-decoration: none; 
+}
+.uzt-cta--sm { padding: 8px 16px; }
+.uzt-cta__note { font-size: 12px; color: #475569; margin: 6px 0 0; }
+
+.uzt-risk { margin-top: 16px; font-size: 14px; background: #FEF3C7; border: 1px solid #FCD34D; color: #92400E; padding: 12px; border-radius: 8px; }
+
+.uzt-broker table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+.uzt-broker th, .uzt-broker td { border: 1px solid var(--color-neutral-200); padding: 10px; text-align: left; vertical-align: top; }
+.uzt-broker th { background: var(--color-neutral-50); color: var(--color-neutral-900); width: 40%; }
+
+.uzt-proscons { display: flex; gap: 16px; flex-wrap: wrap; }
+.uzt-pros, .uzt-cons { flex: 1; min-width: 240px; border: 1px solid var(--color-neutral-200); border-radius: 12px; padding: 16px; }
+.uzt-pros h2 { color: #166534; }
+.uzt-cons h2 { color: #B91C1C; }
+.uzt-pros li, .uzt-cons li { margin-bottom: 6px; }
+
+.uzt-trust { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; color: #475569; background: var(--color-neutral-50); border-radius: 8px; padding: 12px; }
+.uzt-trust a { color: var(--color-brand-primary); text-decoration: none; }
+
+.uzt-disclaimer { font-size: 13px; color: #475569; background: var(--color-neutral-50); border-radius: 8px; padding: 16px; }
+.uzt-disclaimer a, .uzt-verdict a { text-decoration: underline; }
+
+.uzt-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: none; align-items: center; gap: 8px; background: #fff; border-top: 1px solid var(--color-neutral-200); padding: 8px 12px; box-shadow: 0 -2px 8px rgba(0,0,0,.06); }
+.uzt-sticky__name { flex: 1; font-weight: 600; font-size: 14px; color: var(--color-neutral-900); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.uzt-grid__value { overflow-wrap: break-word; word-break: break-word; }
+
+@media (max-width: 768px) {
+	.uzt-hero__title { font-size: 22px; }
+	.uzt-sticky { display: flex; }
+	.uzt-broker { padding-bottom: 80px; }
+}
+
+/* ==================== 3. FAQ-АККОРДЕОН ==================== */
+.uzt-faq__item { border: 1px solid var(--color-neutral-200); border-radius: 8px; margin-bottom: 8px; background: #fff; }
+.uzt-faq__q { cursor: pointer; padding: 14px 44px 14px 16px; font-weight: 600; color: var(--color-neutral-900); list-style: none; position: relative; }
+.uzt-faq__q::-webkit-details-marker { display: none; }
+.uzt-faq__q::after { content: "+"; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); font-size: 22px; line-height: 1; color: var(--color-brand-primary); }
+.uzt-faq__item[open] .uzt-faq__q::after { content: "–"; }
+.uzt-faq__a { padding: 0 16px 16px; color: var(--color-neutral-700); }
+.uzt-faq__a p { margin: 0 0 8px; }
+.uzt-faq__a p:last-child { margin-bottom: 0; }
+
+/* ==================== 4. UZT REVIEWS ==================== */
+.uzt-broker-reviews {
+	--uzt-primary: var(--color-brand-primary);
+	--uzt-primary-hover: var(--color-brand-primary-hover);
+	--uzt-primary-soft: #E6EEFF;
+	--uzt-star: var(--color-rating-star-fill);
+	--uzt-star-empty: var(--color-neutral-200);
+	--uzt-text: var(--color-neutral-700);
+	--uzt-heading: var(--color-neutral-900);
+	--uzt-muted: #475569;
+	--uzt-border: var(--color-neutral-200);
+	--uzt-bg-soft: var(--color-neutral-50);
+	--uzt-radius: 12px;
+	--uzt-shadow: 0 1px 3px rgba(15, 23, 42, .06);
+
+	display: block;
+	margin: 32px 0;
+	color: var(--uzt-text);
+}
+
+.uzt-broker-reviews > h2:first-child {
+	margin: 0 0 20px;
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--uzt-heading);
+}
+
+/* -------- 1. Summary -------- */
+.uzt-broker-reviews__summary { background: #fff; border: 1px solid var(--uzt-border); border-radius: var(--uzt-radius); box-shadow: var(--uzt-shadow); padding: 24px; margin-bottom: 24px; }
+.uzt-broker-reviews__summary .glsr-summary { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: center; }
+.uzt-broker-reviews__summary .glsr-summary__rating, .uzt-broker-reviews__summary [class*="summary__rating"] { font-size: 48px; font-weight: 700; line-height: 1; color: var(--uzt-heading); text-align: center; }
+.uzt-broker-reviews__summary .glsr-summary__stars { display: flex; justify-content: center; gap: 2px; margin: 8px 0; }
+.uzt-broker-reviews__summary .glsr-summary__count, .uzt-broker-reviews__summary .glsr-summary__reviews-count { font-size: 14px; color: var(--uzt-muted); text-align: center; }
+.uzt-broker-reviews__summary .glsr-bar-chart { display: grid; gap: 6px; }
+.uzt-broker-reviews__summary .glsr-bar { display: grid; grid-template-columns: 40px 1fr 40px; align-items: center; gap: 10px; font-size: 13px; color: var(--uzt-muted); }
+.uzt-broker-reviews__summary .glsr-bar-background { height: 8px; background: var(--uzt-star-empty); border-radius: 4px; overflow: hidden; }
+.uzt-broker-reviews__summary .glsr-bar-foreground { height: 100%; background: var(--uzt-star); border-radius: 4px; transition: width .3s ease; }
+
+/* -------- 2. Reviews list -------- */
+.uzt-broker-reviews__list { display: grid; gap: 16px; margin-bottom: 32px; }
+.uzt-broker-reviews__list .glsr-review { background: #fff; border: 1px solid var(--uzt-border); border-radius: var(--uzt-radius); box-shadow: var(--uzt-shadow); padding: 20px 24px; }
+.uzt-broker-reviews__list .glsr-review__header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.uzt-broker-reviews__list .glsr-review__title, .uzt-broker-reviews__list .glsr-review__author { font-size: 16px; font-weight: 600; color: var(--uzt-heading); }
+.uzt-broker-reviews__list .glsr-review__date { font-size: 13px; color: var(--uzt-muted); }
+.uzt-broker-reviews__list .glsr-review__rating, .uzt-broker-reviews__list .glsr-review__stars { display: inline-flex; gap: 2px; margin: 4px 0 10px; }
+.uzt-broker-reviews__list .glsr-review__content { font-size: 15px; line-height: 1.6; color: var(--uzt-text); margin: 0; }
+
+/* -------- 3. Star icons -------- */
+.uzt-broker-reviews .glsr-star, .uzt-broker-reviews .glsr-star-full, .uzt-broker-reviews svg[class*="star"] { width: 18px; height: 18px; fill: var(--uzt-star); }
+.uzt-broker-reviews .glsr-star-empty { fill: var(--uzt-star-empty); }
+
+/* -------- 4. Pagination -------- */
+.uzt-broker-reviews .glsr-pagination { display: flex; justify-content: center; gap: 6px; margin-top: 20px; }
+.uzt-broker-reviews .glsr-pagination a, .uzt-broker-reviews .glsr-pagination span { padding: 6px 12px; border: 1px solid var(--uzt-border); border-radius: 6px; font-size: 14px; color: var(--uzt-text); text-decoration: none; transition: all .15s ease; }
+.uzt-broker-reviews .glsr-pagination a:hover { border-color: var(--uzt-primary); color: var(--uzt-primary); }
+.uzt-broker-reviews .glsr-pagination .current { background: var(--uzt-primary); border-color: var(--uzt-primary); color: #fff; }
+
+/* -------- 5. Form -------- */
+.uzt-broker-reviews__form { background: var(--uzt-bg-soft); border: 1px solid var(--uzt-border); border-radius: var(--uzt-radius); padding: 24px; }
+.uzt-broker-reviews__form-title { margin: 0 0 16px; font-size: 20px; font-weight: 700; color: var(--uzt-heading); }
+.uzt-broker-reviews__form .glsr-field { margin-bottom: 14px; }
+.uzt-broker-reviews__form .glsr-field label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 500; color: var(--uzt-text); }
+.uzt-broker-reviews__form input[type="text"], .uzt-broker-reviews__form input[type="email"], .uzt-broker-reviews__form input[type="url"], .uzt-broker-reviews__form textarea, .uzt-broker-reviews__form select { width: 100%; padding: 10px 12px; border: 1px solid var(--uzt-border); border-radius: 8px; font: inherit; font-size: 15px; background: #fff; transition: border-color .15s ease, box-shadow .15s ease; }
+.uzt-broker-reviews__form input:focus, .uzt-broker-reviews__form textarea:focus, .uzt-broker-reviews__form select:focus { border-color: var(--uzt-primary); box-shadow: 0 0 0 3px var(--uzt-primary-soft); }
+.uzt-broker-reviews__form .glsr-button, .uzt-broker-reviews__form button[type="submit"] { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; background: var(--uzt-primary); color: #fff; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; transition: background .15s ease; }
+.uzt-broker-reviews__form .glsr-button:hover, .uzt-broker-reviews__form button[type="submit"]:hover { background: var(--uzt-primary-hover); color: #fff; }
+.uzt-broker-reviews__form button[disabled], .uzt-broker-reviews__form button[aria-busy="true"] { opacity: .6; cursor: not-allowed; }
+
+/* -------- 6. Source badges -------- */
+.uzt-review-badge { display: inline-flex; align-items: center; gap: 6px; margin: 10px 0 0; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 500; line-height: 1.4; }
+.uzt-review-badge--editorial { background: #E6F9ED; color: #06753A; }
+.uzt-review-badge--external  { background: #F0F2F5; color: #555; }
+.uzt-review-badge__icon      { font-size: 14px; line-height: 1; }
+
+/* -------- 7. Success/error messages -------- */
+.uzt-broker-reviews [class*="form-message"] { margin: 12px 0 0; padding: 12px 16px; border-radius: 8px; font-size: 14px; }
+.uzt-broker-reviews [class*="form-message"][data-type="success"] { background: #DCFCE7; color: #166534; border: 1px solid #86EFAC; }
+.uzt-broker-reviews [class*="form-message"][data-type="error"] { background: #FEF2F2; color: #991B1B; border: 1px solid #FCA5A5; }
+
+/* -------- 8. Empty state -------- */
+.uzt-broker-reviews__list:empty::before, .uzt-broker-reviews__list .glsr-no-results { display: block; text-align: center; padding: 40px 20px; color: var(--uzt-muted); font-size: 15px; font-style: italic; background: var(--uzt-bg-soft); border: 1px dashed var(--uzt-border); border-radius: var(--uzt-radius); content: "Пока нет отзывов об этом брокере. Станьте первым — воспользуйтесь формой ниже."; }
+
+/* -------- 9. Mobile (≤ 767px) -------- */
+@media (max-width: 767px) {
+	.uzt-broker-reviews { margin: 24px 0; }
+	.uzt-broker-reviews__summary, .uzt-broker-reviews__form { padding: 16px; }
+	.uzt-broker-reviews__summary .glsr-summary { grid-template-columns: 1fr; gap: 16px; }
+	.uzt-broker-reviews__summary .glsr-summary__rating { font-size: 36px; }
+	.uzt-broker-reviews__list .glsr-review { padding: 16px 18px; }
+	.uzt-broker-reviews__list .glsr-review__header { flex-direction: column; align-items: flex-start; gap: 4px; }
+	.uzt-broker-reviews__form-title { font-size: 18px; }
+}
+
+/* -------- v1.3.0: варианты split-шорткодов -------- */
+.uzt-broker-reviews--summary-only { margin: 24px 0; }
+.uzt-broker-reviews--full { margin: 48px 0 32px; scroll-margin-top: 80px; }
+.uzt-broker-reviews__section-title { margin: 0 0 20px; font-size: 24px; font-weight: 700; color: var(--uzt-heading); }
+.uzt-broker-reviews__summary-cta { margin: 12px 0 0; text-align: center; font-size: 14px; }
+.uzt-broker-reviews__summary-cta a { color: var(--uzt-primary); text-decoration: none; font-weight: 500; }
+.uzt-broker-reviews__summary-cta a:hover { text-decoration: underline; }
+
+/* === Шаг 4 (E-E-A-T спринт) === */
+.uzt-reviews-context{display:flex;gap:.75rem;padding:1rem 1.25rem;margin:1.5rem 0;background:var(--uzt-info-bg,#eef4ff);border-left:3px solid var(--uzt-info-border,#3b82f6);border-radius:6px;font-size:.95rem;line-height:1.55}
+.uzt-reviews-context__icon{font-size:1.35rem;line-height:1;flex-shrink:0;padding-top:.15rem}
+.uzt-reviews-context__body{flex:1;min-width:0}
+.uzt-reviews-context__title{margin:0 0 .5rem;font-size:1rem;font-weight:600;color:var(--uzt-info-title,#1e3a8a)}
+.uzt-reviews-context__body p{margin:0 0 .65rem}
+.uzt-reviews-context__body p:last-child{margin-bottom:0}
+.uzt-reviews-context__note{font-size:.88rem;color:var(--uzt-muted,#64748b);font-style:italic}
+@media (prefers-color-scheme:dark){
+	.uzt-reviews-context{background:rgba(59,130,246,.08);border-left-color:#60a5fa}
+	.uzt-reviews-context__title{color:#93c5fd}
+	.uzt-reviews-context__note{color:#94a3b8}
+}
+
+/* === Глобальные переопределения и ссылки === */
+[style*="#ff9800"] { color: #b8681f !important; }
+.uzt-stars-color { color: #b8681f; }
+.entry-content a, .single-broker a { text-decoration: underline; }
+.glsr-review-assigned_links a { text-decoration: underline !important; }
+
+.uzt-disclaimer a, 
+.uzt-reviews-context a, 
+.glsr-review-assigned_links a,
+.uzt-trust a {
+	text-decoration: underline !important;
+}
